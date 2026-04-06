@@ -17,7 +17,7 @@ export default function manifest(): MetadataRoute.Manifest {
       { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
     ],
     screenshots: [
-      { src: '/screenshots/home.jpg', sizes: '1280x720', type: 'image/jpeg', label: 'Home page' },
+      { src: '/screenshots/home.jpg', sizes: '1280x720', type: 'image/jpeg' },
     ],
     shortcuts: [
       {
