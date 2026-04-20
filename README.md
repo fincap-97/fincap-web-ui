@@ -4,7 +4,7 @@ A modern, high-conversion real estate website for **Regalia Estates**, a premium
  
 Built with **Next.js 14 (App Router)** + **Tailwind CSS** — fully responsive, production-ready, and client-friendly.
 
----
+---  
    
 ## ✨ Features
 
