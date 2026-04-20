@@ -1,7 +1,7 @@
 # Regalia Estates — Premium Real Estate Website
 
 A modern, high-conversion real estate website for **Regalia Estates**, a premium real estate broking firm based in **Lucknow, India**.
-
+ 
 Built with **Next.js 14 (App Router)** + **Tailwind CSS** — fully responsive, production-ready, and client-friendly.
 
 ---
