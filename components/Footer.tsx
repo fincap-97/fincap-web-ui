@@ -269,7 +269,7 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
+            {/* <Link href="/" className="flex items-center gap-3 mb-6">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center"
                 style={{ background: '#E63946' }}
@@ -285,6 +285,34 @@ export default function Footer() {
                   Estates
                 </span>
               </div>
+            </Link> */}
+
+            <Link href="/" className="flex items-center gap-3 mb-6">
+
+              {/* Logo */}
+              <div
+                className="w-32 h-16 rounded-lg flex items-center justify-center bg-white overflow-hidden"
+              >
+                <img
+                  src="/fincap logo2.png"   // 👈 yaha apna logo daalo (public folder me)
+                  alt="Fincap Logo"
+                  className="w-28 h-16 object-contain"
+                />
+              </div>
+
+              {/* Text */}
+              {/* <div className="leading-none">
+                <span className="font-serif font-bold text-2xl text-white block">
+                  Fincap
+                </span>
+                <span
+                  className="text-[10px] font-semibold tracking-[0.25em] uppercase block"
+                  style={{ color: '#E63946' }}
+                >
+                  Estates
+                </span>
+              </div> */}
+
             </Link>
 
             <p className="text-sm leading-relaxed mb-6 max-w-xs" style={{ color: 'rgba(255,255,255,0.50)' }}>
@@ -311,7 +339,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" style={{ color: '#E63946' }} />
-                <span>12, Shahnajaf Road, Hazratganj,<br />Lucknow — 226001, Uttar Pradesh</span>
+                <span>402, Eldeco Corporate Chamber-2, Vibhuti Khand, Gomti Nagar,<br /> Lucknow - 226010, Uttar Pradesh</span>
               </div>
             </div>
 
