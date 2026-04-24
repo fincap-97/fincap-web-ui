@@ -3614,6 +3614,7 @@ export default function HomePage() {
 
       <CuratedCollections />
 
+
       {/* ─── WHY CHOOSE US ─── */}
       <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
