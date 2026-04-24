@@ -206,19 +206,20 @@ import {
 const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/properties', label: 'Buy Property' },
-  { href: '/properties?type=rent', label: 'Rent Property' },
-  { href: '/properties?type=project', label: 'New Projects' },
+  { href: '/properties', label: 'Under Construction' },
+  { href: '/properties', label: 'Ready to Move' },
+  { href: '/properties', label: 'New Launch' },
+
   // { href: '/sell', label: 'Sell Property' },
   { href: '/about', label: 'About Us' },
 ]
 
 const locationLinks = [
   { href: '/location/gomti-nagar', label: 'Gomti Nagar' },
-  { href: '/location/hazratganj', label: 'Hazratganj' },
+  { href: '/location/vrindavan-yojana', label: 'Vrindavan Yojana' },
   { href: '/location/shaheed-path', label: 'Shaheed Path' },
-  { href: '/location/aliganj', label: 'Aliganj' },
   { href: '/location/sultanpur-road', label: 'Sultanpur Road' },
-  { href: '/location/vibhuti-khand', label: 'Vibhuti Khand' },
+  { href: '/location/sushant-golf-city', label: 'Golf City' },
 ]
 
 const propertyTypes = [
@@ -348,7 +349,7 @@ export default function Footer() {
               {[
                 { icon: Instagram, label: 'Instagram' },
                 { icon: Facebook, label: 'Facebook' },
-                { icon: Twitter, label: 'Twitter' },
+                // { icon: Twitter, label: 'Twitter' },
                 { icon: Youtube, label: 'YouTube' },
               ].map(({ icon: Icon, label }) => (
                 <a

@@ -32,12 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.75,
     },
-    {
-      url: `${BASE}/sell`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
   ]
 
   // ── Property detail pages ──────────────────────────────────────────────────

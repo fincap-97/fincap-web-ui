@@ -249,9 +249,13 @@ const config: Config = {
         },
       },
 
+      // fontFamily: {
+      //   sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+      //   serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+      // },
       fontFamily: {
-        sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['Nunito Sans', 'system-ui', 'sans-serif'],
+        serif: ['Nunito', 'system-ui', 'sans-serif'],
       },
 
       backgroundImage: {

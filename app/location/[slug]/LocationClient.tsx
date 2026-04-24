@@ -286,7 +286,7 @@ import PropertyCard from '@/components/PropertyCard'
 
 const gradientMap: Record<string, string> = {
   'gomti-nagar': 'linear-gradient(135deg, #1e3a5f 0%, #2d6a8a 100%)',
-  'hazratganj': 'linear-gradient(135deg, #2a1a4a 0%, #4a2d6a 100%)',
+  'golf-city': 'linear-gradient(135deg, #2a1a4a 0%, #4a2d6a 100%)',
   'shaheed-path': 'linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%)',
   'aliganj': 'linear-gradient(135deg, #2a1020 0%, #5a2040 100%)',
   'sultanpur-road': 'linear-gradient(135deg, #3d1f00 0%, #6b3a10 100%)',

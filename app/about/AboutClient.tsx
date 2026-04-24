@@ -532,26 +532,20 @@ import {
 import { stats } from '@/lib/data'
 
 const team = [
-  {
-    name: 'Adhaar Bansal',
-    role: 'Founder & Mentor',
-    exp: '15+ Years',
-    initials: 'AB',
-    speciality: 'Strategic Planning & Execution',
-  },
+
   {
     name: 'Rakesh Dubey',
-    role: 'Partner',
+    role: 'Director',
     exp: '12+ Years',
     initials: 'RD',
     speciality: 'Sales & Marketing',
   },
   {
-    name: 'Shahnawaz Khan',
-    role: 'Partner',
-    exp: '17+ Years',
-    initials: 'SK',
-    speciality: 'Finance & Banking',
+    name: 'Ram sharan Tripathi',
+    role: 'Director',
+    exp: '10+ Years',
+    initials: 'RST',
+    speciality: 'Sales & Marketing',
   },
 ]
 
@@ -881,6 +875,7 @@ export default function AboutClient() {
       </section>
 
       {/* ── Team ── */}
+      {/* ── Team ── */}
       <section className="py-14 sm:py-20 md:py-28"
         style={{ background: '#F5F7FA', borderTop: '1px solid #E8ECF2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -894,8 +889,8 @@ export default function AboutClient() {
             </h2>
           </div>
 
-          {/* 1 col mobile → 2 col sm → 3 col lg */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 max-w-5xl mx-auto">
+          {/* 1 col mobile → 2 col sm+ */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
             {team.map((member) => (
               <div key={member.name}
                 className="bg-white p-5 sm:p-7 rounded-xl sm:rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"

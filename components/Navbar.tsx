@@ -649,9 +649,10 @@ const navLinks = [
     label: 'Locations',
     children: [
       { href: '/location/gomti-nagar', label: 'Gomti Nagar' },
-      { href: '/location/hazratganj', label: 'Hazratganj' },
+      { href: '/location/vrindavan-yojana', label: 'Vrindavan Yojana' },
       { href: '/location/shaheed-path', label: 'Shaheed Path' },
       { href: '/location/sultanpur-road', label: 'Sultanpur Road' },
+      { href: '/location/sushant-golf-city', label: 'Golf City' },
     ],
   },
   { href: '/services', label: 'Services' },
@@ -681,7 +682,7 @@ export default function Navbar() {
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center group">
-              <div className="w-32 h-32 flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="w-36 h-36 flex items-center justify-center transition-transform group-hover:scale-105">
                 <img
                   src="/fincap logo2.png"
                   alt="Fincap Logo"
