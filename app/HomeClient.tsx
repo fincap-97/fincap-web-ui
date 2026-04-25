@@ -3386,6 +3386,8 @@ export default function HomePage() {
   const [searchLocation, setSearchLocation] = useState('')
   const [searchBudget, setSearchBudget] = useState('')
   const [searchType, setSearchType] = useState('')
+  const [inquiryLoading, setInquiryLoading] = useState(false)
+  const [inquirySubmitted, setInquirySubmitted] = useState(false)
   const [inquiryForm, setInquiryForm] = useState({ name: '', phone: '', location: '', message: '' })
 
   const featuredProperties = properties.filter((p) => p.featured)
@@ -3832,10 +3834,10 @@ export default function HomePage() {
       </section>
 
       {/* ─── QUICK INQUIRY FORM ─── */}
-      <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+      {/* <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 items-center">
-            {/* Left info */}
+           
             <div>
               <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 flex items-center gap-2" style={{ color: '#E63946' }}>
                 <span className="w-6 sm:w-8 h-px" style={{ background: '#E63946' }} />Get in Touch
@@ -3872,7 +3874,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Form */}
+           
             <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-10"
               style={{ border: '1px solid #E8ECF2', boxShadow: '0 4px 24px rgba(11,31,58,0.08)' }}>
               <h3 className="font-serif text-xl sm:text-2xl font-semibold mb-5 sm:mb-6" style={{ color: '#0B1F3A' }}>
@@ -3942,6 +3944,195 @@ export default function HomePage() {
                   We never share your data.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* ─── QUICK INQUIRY FORM ─── */}
+      {/* 
+  State additions needed at top of HomePage component:
+  const [inquiryLoading, setInquiryLoading] = useState(false)
+  const [inquirySubmitted, setInquirySubmitted] = useState(false)
+*/}
+
+      <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 items-center">
+
+            {/* Left info */}
+            <div>
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 flex items-center gap-2"
+                style={{ color: '#E63946' }}>
+                <span className="w-6 sm:w-8 h-px" style={{ background: '#E63946' }} />Get in Touch
+              </p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
+                style={{ color: '#0B1F3A' }}>
+                Quick Property<br />Inquiry
+              </h2>
+              <p className="mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base" style={{ color: '#6B7280' }}>
+                Share your requirements and our expert advisors will contact you within 30 minutes.
+              </p>
+              <div className="space-y-3 sm:space-y-4">
+                {['Free property matching service', 'Expert legal & financial guidance', 'Zero brokerage for buyers', 'Site visit assistance'].map((text) => (
+                  <div key={text} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                      style={{ background: '#FEE8EA' }}>
+                      <CheckCircle2 className="w-3.5 h-3.5" style={{ color: '#E63946' }} />
+                    </div>
+                    <span className="font-medium text-sm sm:text-base" style={{ color: '#1A1A1A' }}>{text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 sm:mt-10 p-5 sm:p-6 bg-white rounded-xl"
+                style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 12px rgba(11,31,58,0.05)' }}>
+                <p className="font-serif font-semibold mb-3 sm:mb-4" style={{ color: '#0B1F3A' }}>Office Hours</p>
+                <div className="space-y-2 text-xs sm:text-sm" style={{ color: '#6B7280' }}>
+                  <div className="flex justify-between">
+                    <span>Monday – Saturday</span>
+                    <span className="font-semibold" style={{ color: '#1A1A1A' }}>9:00 AM – 8:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday</span>
+                    <span className="font-semibold" style={{ color: '#1A1A1A' }}>10:00 AM – 5:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-10"
+              style={{ border: '1px solid #E8ECF2', boxShadow: '0 4px 24px rgba(11,31,58,0.08)' }}>
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold mb-5 sm:mb-6"
+                style={{ color: '#0B1F3A' }}>
+                Send an Enquiry
+              </h3>
+
+              {/* ── Success state ── */}
+              {inquirySubmitted ? (
+                <div className="text-center py-10 sm:py-12">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                    <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
+                  </div>
+                  <h4 className="font-serif text-xl font-bold mb-2" style={{ color: '#0B1F3A' }}>
+                    Enquiry Sent!
+                  </h4>
+                  <p className="text-sm" style={{ color: '#6B7280' }}>
+                    Thank you! Our expert will contact you within 30 minutes.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setInquirySubmitted(false)
+                      setInquiryForm({ name: '', phone: '', location: '', message: '' })
+                    }}
+                    className="mt-5 text-sm font-semibold hover:underline"
+                    style={{ color: '#E63946' }}>
+                    Send another enquiry
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-4 sm:space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div>
+                      <label className="block text-sm font-medium mb-1.5 sm:mb-2" style={{ color: '#1A1A1A' }}>
+                        Full Name <span style={{ color: '#E63946' }}>*</span>
+                      </label>
+                      <input type="text" placeholder="Rajesh Sharma"
+                        value={inquiryForm.name}
+                        onChange={(e) => setInquiryForm({ ...inquiryForm, name: e.target.value })}
+                        className="w-full px-4 py-3 rounded-lg text-sm"
+                        style={{ border: '1px solid #E8ECF2', color: '#1A1A1A', outline: 'none' }} />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1.5 sm:mb-2" style={{ color: '#1A1A1A' }}>
+                        Phone Number <span style={{ color: '#E63946' }}>*</span>
+                      </label>
+                      <input type="tel" placeholder="+91 98765 43210"
+                        value={inquiryForm.phone}
+                        onChange={(e) => setInquiryForm({ ...inquiryForm, phone: e.target.value })}
+                        className="w-full px-4 py-3 rounded-lg text-sm"
+                        style={{ border: '1px solid #E8ECF2', color: '#1A1A1A', outline: 'none' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 sm:mb-2" style={{ color: '#1A1A1A' }}>
+                      Preferred Location
+                    </label>
+                    <select
+                      value={inquiryForm.location}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, location: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg text-sm bg-white"
+                      style={{ border: '1px solid #E8ECF2', color: '#1A1A1A', outline: 'none' }}>
+                      <option value="">Select Area</option>
+                      {locationOptions.map((l) => <option key={l}>{l}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 sm:mb-2" style={{ color: '#1A1A1A' }}>
+                      Budget
+                    </label>
+                    <select className="w-full px-4 py-3 rounded-lg text-sm bg-white"
+                      style={{ border: '1px solid #E8ECF2', color: '#1A1A1A', outline: 'none' }}>
+                      <option value="">Select Budget</option>
+                      {budgetOptions.map((b) => <option key={b}>{b}</option>)}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 sm:mb-2" style={{ color: '#1A1A1A' }}>
+                      Message
+                    </label>
+                    <textarea rows={3} placeholder="Tell us about your requirements..."
+                      value={inquiryForm.message}
+                      onChange={(e) => setInquiryForm({ ...inquiryForm, message: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg text-sm resize-none"
+                      style={{ border: '1px solid #E8ECF2', color: '#1A1A1A', outline: 'none' }} />
+                  </div>
+                  <button
+                    type="button"
+                    disabled={inquiryLoading}
+                    onClick={async () => {
+                      if (!inquiryForm.name.trim() || !inquiryForm.phone.trim()) return
+                      setInquiryLoading(true)
+                      try {
+                        const res = await fetch('/api/contact', {
+                          method: 'POST',
+                          headers: { 'Content-Type': 'application/json' },
+                          body: JSON.stringify({
+                            name: inquiryForm.name,
+                            phone: inquiryForm.phone,
+                            email: '',
+                            subject: `Property Enquiry — ${inquiryForm.location || 'General'}`,
+                            message: inquiryForm.message,
+                            type: 'Buy Property',
+                          }),
+                        })
+                        const data = await res.json()
+                        if (data.success) {
+                          setInquirySubmitted(true)
+                        } else {
+                          alert('Something went wrong. Please try again.')
+                        }
+                      } catch {
+                        alert('Something went wrong. Please try again.')
+                      } finally {
+                        setInquiryLoading(false)
+                      }
+                    }}
+                    className="w-full text-white font-semibold py-3.5 sm:py-4 rounded-lg flex items-center justify-center gap-2 transition-all text-sm disabled:opacity-70"
+                    style={{ background: '#E63946', boxShadow: '0 4px 16px rgba(230,57,70,0.30)' }}>
+                    {inquiryLoading ? (
+                      'Sending...'
+                    ) : (
+                      <><Send className="w-4 h-4" />Send Enquiry</>
+                    )}
+                  </button>
+                  <p className="text-center text-xs" style={{ color: '#9CA3AF' }}>
+                    By submitting, you agree to our{' '}
+                    <Link href="#" className="hover:underline" style={{ color: '#E63946' }}>Privacy Policy</Link>.
+                    We never share your data.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

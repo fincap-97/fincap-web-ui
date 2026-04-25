@@ -1192,7 +1192,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
 const banners = [
     {
         id: 1,
-        badge: '✦ New Launch',
+        badge: '✦ Ready to Move',
         badgeColor: '#7B1C5E',
         title: 'Rishita Mulberry Heights',
         subtitle: '2 & 3 BHK Luxury Apartments — Golf View Facing',
@@ -1201,7 +1201,7 @@ const banners = [
         tag: '80% Open Space',
         tagColor: '#7B1C5E',
         cta: 'Book Site Visit',
-        href: '/properties',
+        href: '/contact',
         bgGradient: 'linear-gradient(135deg, #2d0a2e 0%, #5c1a5a 60%, #7b1c6e 100%)',
         bgImage: '/banners/Rishita.png',
         accentColor: '#E879C8',
