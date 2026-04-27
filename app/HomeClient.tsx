@@ -3671,7 +3671,7 @@ export default function HomePage() {
                 Hot Projects &amp; Deals
               </h2>
             </div>
-            <Link href="/properties?type=project"
+            <Link href="/properties?tab=New Launch"
               className="flex items-center gap-2 font-semibold text-sm sm:text-base hover:gap-4 transition-all group shrink-0"
               style={{ color: '#E63946' }}>
               All New Projects <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -3680,7 +3680,7 @@ export default function HomePage() {
           {/* 1 col mobile → 2 col tablet → 3 col desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {hotDeals.map((p) => (
-              <Link key={p.id} href={`/properties/${p.id}`} className="group">
+              <Link key={p.id} href={`/properties/${p.slug}`} className="group">
                 <div className="rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
                   style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 16px rgba(11,31,58,0.06)' }}>
                   <div className="h-48 sm:h-52 relative"
