@@ -60,7 +60,7 @@ export default function Image({ params }: { params: { id: string } }) {
             <span style={{ color: 'white', fontSize: 22, fontWeight: 'bold' }}>R</span>
           </div>
           <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 22, fontWeight: 700 }}>
-            Fincap sol
+            Fincap Adviser
           </span>
         </div>
 

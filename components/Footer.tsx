@@ -195,22 +195,280 @@
 // }
 
 
+// 'use client'
+
+// import Link from 'next/link'
+// import {
+//   Building2, Phone, Mail, MapPin,
+//   Instagram, Facebook, Twitter, Youtube, ArrowRight,
+// } from 'lucide-react'
+
+// const quickLinks = [
+//   { href: '/', label: 'Home' },
+//   { href: '/properties', label: 'Buy Property' },
+//   { href: '/properties', label: 'Under Construction' },
+//   { href: '/properties', label: 'Ready to Move' },
+//   { href: '/properties', label: 'New Launch' },
+
+//   // { href: '/sell', label: 'Sell Property' },
+//   { href: '/about', label: 'About Us' },
+// ]
+
+// const locationLinks = [
+//   { href: '/location/gomti-nagar', label: 'Gomti Nagar' },
+//   { href: '/location/vrindavan-yojana', label: 'Vrindavan Yojana' },
+//   { href: '/location/shaheed-path', label: 'Shaheed Path' },
+//   { href: '/location/sultanpur-road', label: 'Sultanpur Road' },
+//   { href: '/location/sushant-golf-city', label: 'Golf City' },
+// ]
+
+// const propertyTypes = [
+//   '2 BHK Apartments', '3 BHK Apartments', 'Luxury Villas',
+//   'Penthouses', 'Commercial Spaces', 'Plots & Land',
+// ]
+
+// export default function Footer() {
+//   return (
+//     <footer style={{ background: '#0B1F3A' }}>
+
+//       {/* Newsletter Bar */}
+//       {/* <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+//         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-10">
+//           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+//             <div>
+//               <h3 className="font-serif text-2xl font-semibold text-white mb-1">
+//                 Stay Ahead of the Market
+//               </h3>
+//               <p className="text-sm" style={{ color: 'rgba(255,255,255,0.50)' }}>
+//                 Get exclusive property alerts and market insights to your inbox.
+//               </p>
+//             </div>
+//             <div className="flex w-full md:w-auto gap-3">
+//               <input
+//                 type="email"
+//                 placeholder="Enter your email"
+//                 className="flex-1 md:w-72 px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none"
+//                 style={{
+//                   background: 'rgba(255,255,255,0.08)',
+//                   border: '1px solid rgba(255,255,255,0.15)',
+//                 }}
+//               />
+//               <button
+//                 className="px-6 py-3 rounded-lg font-semibold text-sm text-white whitespace-nowrap transition-colors"
+//                 style={{ background: '#E63946' }}
+//               >
+//                 Subscribe
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div> */}
+
+//       {/* Main Footer */}
+//       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+
+//           {/* Brand Column */}
+//           <div className="lg:col-span-2">
+//             {/* <Link href="/" className="flex items-center gap-3 mb-6">
+//               <div
+//                 className="w-10 h-10 rounded-lg flex items-center justify-center"
+//                 style={{ background: '#E63946' }}
+//               >
+//                 <Building2 className="w-5 h-5 text-white" />
+//               </div>
+//               <div className="leading-none">
+//                 <span className="font-serif font-bold text-2xl text-white block">Fincap</span>
+//                 <span
+//                   className="text-[10px] font-semibold tracking-[0.25em] uppercase block"
+//                   style={{ color: '#E63946' }}
+//                 >
+//                   Estates
+//                 </span>
+//               </div>
+//             </Link> */}
+
+//             <Link href="/" className="flex items-center gap-3 mb-6">
+
+//               {/* Logo */}
+//               <div
+//                 className="w-32 h-16 rounded-lg flex items-center justify-center bg-white overflow-hidden"
+//               >
+//                 <img
+//                   src="/fincap logo2.png"   // 👈 yaha apna logo daalo (public folder me)
+//                   alt="Fincap Logo"
+//                   className="w-28 h-16 object-contain"
+//                 />
+//               </div>
+
+//               {/* Text */}
+//               {/* <div className="leading-none">
+//                 <span className="font-serif font-bold text-2xl text-white block">
+//                   Fincap
+//                 </span>
+//                 <span
+//                   className="text-[10px] font-semibold tracking-[0.25em] uppercase block"
+//                   style={{ color: '#E63946' }}
+//                 >
+//                   Estates
+//                 </span>
+//               </div> */}
+
+//             </Link>
+
+//             <p className="text-sm leading-relaxed mb-6 max-w-xs" style={{ color: 'rgba(255,255,255,0.50)' }}>
+//               Lucknow&apos;s most trusted real estate advisory firm. We specialise in premium residential and commercial properties across the city&apos;s finest locations.
+//             </p>
+
+//             {/* Contact Info */}
+//             <div className="space-y-3">
+//               <a
+//                 href="tel:+919876543210"
+//                 className="flex items-center gap-3 text-sm transition-colors group"
+//                 style={{ color: 'rgba(255,255,255,0.60)' }}
+//               >
+//                 <Phone className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+//                 +91 96966 61530
+//               </a>
+//               <a
+//                 href="mailto:info@fincapestates.in"
+//                 className="flex items-center gap-3 text-sm transition-colors"
+//                 style={{ color: 'rgba(255,255,255,0.60)' }}
+//               >
+//                 <Mail className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+//                 info@fincapestates.in
+//               </a>
+//               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
+//                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" style={{ color: '#E63946' }} />
+//                 <span>402, Eldeco Corporate Chamber-2, Vibhuti Khand, Gomti Nagar,<br /> Lucknow - 226010, Uttar Pradesh</span>
+//               </div>
+//             </div>
+
+//             {/* Social Links */}
+//             <div className="flex items-center gap-3 mt-6">
+//               {[
+//                 { icon: Instagram, label: 'Instagram' },
+//                 { icon: Facebook, label: 'Facebook' },
+//                 // { icon: Twitter, label: 'Twitter' },
+//                 { icon: Youtube, label: 'YouTube' },
+//               ].map(({ icon: Icon, label }) => (
+//                 <a
+//                   key={label}
+//                   href="#"
+//                   className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-red-DEFAULT"
+//                   style={{ background: 'rgba(255,255,255,0.08)' }}
+//                   aria-label={label}
+//                 >
+//                   <Icon className="w-4 h-4 text-white" />
+//                 </a>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Quick Links */}
+//           <div>
+//             <h4 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white">
+//               Quick Links
+//             </h4>
+//             <ul className="space-y-3">
+//               {quickLinks.map((link) => (
+//                 <li key={link.href}>
+//                   <Link
+//                     href={link.href}
+//                     className="text-sm flex items-center gap-2 group hover-red transition-colors"
+//                     style={{ color: 'rgba(255,255,255,0.55)' }}
+//                   >
+//                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
+//                     {link.label}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Locations */}
+//           <div>
+//             <h4 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white">
+//               By Location
+//             </h4>
+//             <ul className="space-y-3">
+//               {locationLinks.map((link) => (
+//                 <li key={link.href}>
+//                   <Link
+//                     href={link.href}
+//                     className="text-sm flex items-center gap-2 group hover-red transition-colors"
+//                     style={{ color: 'rgba(255,255,255,0.55)' }}
+//                   >
+//                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
+//                     {link.label}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Property Types */}
+//           <div>
+//             <h4 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white">
+//               Property Types
+//             </h4>
+//             <ul className="space-y-3">
+//               {propertyTypes.map((type) => (
+//                 <li key={type}>
+//                   <Link
+//                     href="/properties"
+//                     className="text-sm flex items-center gap-2 group hover-red transition-colors"
+//                     style={{ color: 'rgba(255,255,255,0.55)' }}
+//                   >
+//                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
+//                     {type}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Bottom Bar */}
+//       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+//         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+//           <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
+//             © {new Date().getFullYear()} Fincap Adviser. All rights reserved.
+//           </p>
+//           <div className="flex items-center gap-6 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
+//             {['Privacy Policy', 'Terms of Service', 'Disclaimer'].map((item) => (
+//               <Link
+//                 key={item}
+//                 href="#"
+//                 className="transition-colors hover:text-white"
+//               >
+//                 {item}
+//               </Link>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   )
+// }
+
+
+
 'use client'
 
 import Link from 'next/link'
 import {
-  Building2, Phone, Mail, MapPin,
-  Instagram, Facebook, Twitter, Youtube, ArrowRight,
+  Phone, Mail, MapPin,
+  Instagram, Facebook, Youtube, ArrowRight,
 } from 'lucide-react'
 
 const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/properties', label: 'Buy Property' },
-  { href: '/properties', label: 'Under Construction' },
-  { href: '/properties', label: 'Ready to Move' },
-  { href: '/properties', label: 'New Launch' },
-
-  // { href: '/sell', label: 'Sell Property' },
+  { href: '/properties?status=under-construction', label: 'Under Construction' },
+  { href: '/properties?status=ready-to-move', label: 'Ready to Move' },
+  { href: '/properties?status=recently-launched', label: 'New Launch' },
   { href: '/about', label: 'About Us' },
 ]
 
@@ -223,46 +481,14 @@ const locationLinks = [
 ]
 
 const propertyTypes = [
-  '2 BHK Apartments', '3 BHK Apartments', 'Luxury Villas',
-  'Penthouses', 'Commercial Spaces', 'Plots & Land',
+  { label: 'Residential', href: '/properties' },
+  { label: 'Commercial', href: '/properties' },
+  { label: 'Farm House', href: '/properties' },
 ]
 
 export default function Footer() {
   return (
     <footer style={{ background: '#0B1F3A' }}>
-
-      {/* Newsletter Bar */}
-      {/* <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="font-serif text-2xl font-semibold text-white mb-1">
-                Stay Ahead of the Market
-              </h3>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.50)' }}>
-                Get exclusive property alerts and market insights to your inbox.
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-72 px-4 py-3 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none"
-                style={{
-                  background: 'rgba(255,255,255,0.08)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                }}
-              />
-              <button
-                className="px-6 py-3 rounded-lg font-semibold text-sm text-white whitespace-nowrap transition-colors"
-                style={{ background: '#E63946' }}
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16">
@@ -270,50 +496,14 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            {/* <Link href="/" className="flex items-center gap-3 mb-6">
-              <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center"
-                style={{ background: '#E63946' }}
-              >
-                <Building2 className="w-5 h-5 text-white" />
-              </div>
-              <div className="leading-none">
-                <span className="font-serif font-bold text-2xl text-white block">Fincap</span>
-                <span
-                  className="text-[10px] font-semibold tracking-[0.25em] uppercase block"
-                  style={{ color: '#E63946' }}
-                >
-                  Estates
-                </span>
-              </div>
-            </Link> */}
-
             <Link href="/" className="flex items-center gap-3 mb-6">
-
-              {/* Logo */}
-              <div
-                className="w-32 h-16 rounded-lg flex items-center justify-center bg-white overflow-hidden"
-              >
+              <div className="w-32 h-16 rounded-lg flex items-center justify-center bg-white overflow-hidden">
                 <img
-                  src="/fincap logo2.png"   // 👈 yaha apna logo daalo (public folder me)
+                  src="/fincap logo2.png"
                   alt="Fincap Logo"
                   className="w-28 h-16 object-contain"
                 />
               </div>
-
-              {/* Text */}
-              {/* <div className="leading-none">
-                <span className="font-serif font-bold text-2xl text-white block">
-                  Fincap
-                </span>
-                <span
-                  className="text-[10px] font-semibold tracking-[0.25em] uppercase block"
-                  style={{ color: '#E63946' }}
-                >
-                  Estates
-                </span>
-              </div> */}
-
             </Link>
 
             <p className="text-sm leading-relaxed mb-6 max-w-xs" style={{ color: 'rgba(255,255,255,0.50)' }}>
@@ -322,25 +512,21 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a
-                href="tel:+919876543210"
-                className="flex items-center gap-3 text-sm transition-colors group"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
-              >
-                <Phone className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
-                +91 8400100342
-              </a>
-              <a
-                href="mailto:info@fincapestates.in"
+              <a href="tel:+919696661530"
                 className="flex items-center gap-3 text-sm transition-colors"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
-              >
+                style={{ color: 'rgba(255,255,255,0.60)' }}>
+                <Phone className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+                +91 96966 61530
+              </a>
+              <a href="mailto:info@fincapsol.co.in"
+                className="flex items-center gap-3 text-sm transition-colors"
+                style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <Mail className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
-                info@fincapestates.in
+                info@fincapsol.co.in
               </a>
               <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.60)' }}>
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" style={{ color: '#E63946' }} />
-                <span>402, Eldeco Corporate Chamber-2, Vibhuti Khand, Gomti Nagar,<br /> Lucknow - 226010, Uttar Pradesh</span>
+                <span>406, 4th Floor, Experio at Experion Capital,<br />Vibhuti Khand, Gomti Nagar,<br />Lucknow — 226010, Uttar Pradesh</span>
               </div>
             </div>
 
@@ -349,16 +535,12 @@ export default function Footer() {
               {[
                 { icon: Instagram, label: 'Instagram' },
                 { icon: Facebook, label: 'Facebook' },
-                // { icon: Twitter, label: 'Twitter' },
                 { icon: Youtube, label: 'YouTube' },
               ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-red-DEFAULT"
+                <a key={label} href="#"
+                  className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
                   style={{ background: 'rgba(255,255,255,0.08)' }}
-                  aria-label={label}
-                >
+                  aria-label={label}>
                   <Icon className="w-4 h-4 text-white" />
                 </a>
               ))}
@@ -372,12 +554,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm flex items-center gap-2 group hover-red transition-colors"
-                    style={{ color: 'rgba(255,255,255,0.55)' }}
-                  >
+                <li key={link.label}>
+                  <Link href={link.href}
+                    className="text-sm flex items-center gap-2 group transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}>
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
                     {link.label}
                   </Link>
@@ -394,11 +574,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {locationLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm flex items-center gap-2 group hover-red transition-colors"
-                    style={{ color: 'rgba(255,255,255,0.55)' }}
-                  >
+                  <Link href={link.href}
+                    className="text-sm flex items-center gap-2 group transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}>
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
                     {link.label}
                   </Link>
@@ -407,26 +585,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Property Types */}
+          {/* Property Types — only 3 */}
           <div>
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-5 text-white">
               Property Types
             </h4>
             <ul className="space-y-3">
               {propertyTypes.map((type) => (
-                <li key={type}>
-                  <Link
-                    href="/properties"
-                    className="text-sm flex items-center gap-2 group hover-red transition-colors"
-                    style={{ color: 'rgba(255,255,255,0.55)' }}
-                  >
+                <li key={type.label}>
+                  <Link href={type.href}
+                    className="text-sm flex items-center gap-2 group transition-colors"
+                    style={{ color: 'rgba(255,255,255,0.55)' }}>
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all" style={{ color: '#E63946' }} />
-                    {type}
+                    {type.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+
         </div>
       </div>
 
@@ -434,16 +611,17 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            © {new Date().getFullYear()} Fincap Estates. All rights reserved.
+            © {new Date().getFullYear()} Fincap Adviser. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm" style={{ color: 'rgba(255,255,255,0.35)' }}>
-            {['Privacy Policy', 'Terms of Service', 'Disclaimer'].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="transition-colors hover:text-white"
-              >
-                {item}
+            {[
+              { label: 'Privacy Policy', href: '/privacy-policy' },
+              { label: 'Terms of Service', href: '/privacy-policy' },
+              // { label: 'Disclaimer', href: '#' },
+            ].map((item) => (
+              <Link key={item.label} href={item.href}
+                className="transition-colors hover:text-white">
+                {item.label}
               </Link>
             ))}
           </div>

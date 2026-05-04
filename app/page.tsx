@@ -5,7 +5,7 @@ import { testimonials } from '@/lib/data'
 import HomeClient from './HomeClient'
 
 export const metadata: Metadata = {
-  title: 'Fincap sol | Your Trusted Real state Advisors in Lucknow',
+  title: 'Fincap Adviser | Your Trusted Real state Advisors in Lucknow',
   description:
     'Lucknow ki No.1 real estate firm. Buy, sell, or rent premium apartments, villas & commercial properties in Gomti Nagar, Hazratganj, Shaheed Path & more. Free consultation. 15+ years. 2500+ families served.',
   keywords: [
@@ -15,20 +15,20 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Fincap sol | Trusted Real Estate in Lucknow',
+    title: 'Fincap Adviser | Trusted Real Estate in Lucknow',
     description: 'Find your dream property in Lucknow. New builder homes & resale properties — all verified. Free consultation today.',
-    url: 'https://www.regaliaestates.in',
+    url: 'https://https://fincapsol.co.in',
     type: 'website',
   },
 }
 
 const HOME_FAQS = [
   {
-    question: 'Fincap sol Lucknow mein kahan located hai?',
+    question: 'Fincap Adviser Lucknow mein kahan located hai?',
     answer: '12, Shahnajaf Road, Hazratganj, Lucknow — 226001. Mon-Sat 9AM-8PM, Sun 10AM-5PM.',
   },
   {
-    question: 'Kya Fincap sol buyers se commission leta hai?',
+    question: 'Kya Fincap Adviser buyers se commission leta hai?',
     answer: 'Nahi. Buyers ke liye hamari advisory service bilkul free hai. Zero brokerage from buyers.',
   },
   {

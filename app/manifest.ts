@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Regalia Estates — Real Estate Lucknow',
-    short_name: 'Regalia Estates',
+    name: 'Fincap — Real Estate Lucknow',
+    short_name: 'Fincap',
     description: 'Lucknow ki No.1 real estate firm. Buy, sell & rent premium properties.',
     start_url: '/',
     display: 'standalone',

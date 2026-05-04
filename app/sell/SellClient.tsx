@@ -46,7 +46,7 @@ export default function SellPropertyPage() {
             Listing Submitted!
           </h2>
           <p className="text-charcoal-muted mb-8">
-            Thank you for choosing Regalia Estates. Our team will review your property details and
+            Thank you for choosing Fincap sol. Our team will review your property details and
             contact you within 24 hours for a free valuation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -344,7 +344,7 @@ export default function SellPropertyPage() {
 
               <div className="bg-white rounded-2xl p-6 shadow-card border border-stone-border/30">
                 <div className="flex gap-1 mb-2">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-4 h-4 fill-gold text-gold" />)}
+                  {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-4 h-4 fill-gold text-gold" />)}
                 </div>
                 <blockquote className="font-serif text-base italic text-charcoal mb-3">
                   &ldquo;Regalia sold my flat in 3 weeks, 8 lakhs above asking price!&rdquo;

@@ -20,17 +20,17 @@ export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    '@id': 'https://www.regaliaestates.in/#organization',
-    name: 'Regalia Estates',
-    alternateName: 'Regalia Estates Lucknow',
-    url: 'https://www.regaliaestates.in',
+    '@id': 'https://fincapsol.co.in/#organization',
+    name: 'Fincap Adviser',
+    alternateName: 'Fincap Adviser Lucknow',
+    url: 'https://fincapsol.co.in',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.regaliaestates.in/logo.png',
+      url: 'https://www.fincapsol.co.in/logo.png',
       width: 200,
       height: 60,
     },
-    image: 'https://www.regaliaestates.in/og-image.jpg',
+    image: 'https://www.fincapsol.co.in/og-image.jpg',
     description:
       'Lucknow\'s most trusted real estate broking firm since 2009. Specialising in premium residential and commercial properties across Gomti Nagar, Hazratganj, Shaheed Path and more.',
     foundingDate: '2009',
@@ -49,7 +49,7 @@ export function localBusinessSchema() {
       longitude: 80.9480,
     },
     telephone: '+91-98765-43210',
-    email: 'info@regaliaestates.in',
+    email: 'info@fincapsol.co.in',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -81,12 +81,12 @@ export function localBusinessSchema() {
       },
     ],
     sameAs: [
-      'https://www.facebook.com/regaliaestates',
-      'https://www.instagram.com/regaliaestates',
-      'https://twitter.com/RegaliaEstates',
-      'https://www.youtube.com/@RegaliaEstates',
+      'https://www.facebook.com/fincapsol',
+      'https://www.instagram.com/fincapsol',
+      'https://twitter.com/FincapSol',
+      'https://www.youtube.com/@FincapSol',
     ],
-    hasMap: 'https://maps.google.com/?q=Regalia+Estates+Hazratganj+Lucknow',
+    hasMap: 'https://maps.google.com/?q=Fincap+Adviser+gomtinagar+Lucknow',
     priceRange: '₹₹₹',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Bank Transfer, Cheque',
@@ -113,16 +113,16 @@ export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://www.regaliaestates.in/#website',
-    url: 'https://www.regaliaestates.in',
-    name: 'Regalia Estates',
+    '@id': 'https://www.fincapsol.co.in/#website',
+    url: 'https://www.fincapsol.co.in',
+    name: 'Fincap Adviser',
     description: 'Premium Real Estate in Lucknow — Buy, Sell, Rent',
-    publisher: { '@id': 'https://www.regaliaestates.in/#organization' },
+    publisher: { '@id': 'https://fincapsol.co.in/#organization' },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://www.regaliaestates.in/properties?q={search_term_string}',
+        urlTemplate: 'https://fincapsol.co.in/properties?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -174,7 +174,7 @@ export function propertySchema(property: {
     '@type': 'Residence',
     name: property.title,
     description: property.description,
-    url: `https://www.regaliaestates.in/properties/${property.id}`,
+    url: `https://fincapsol.co.in/properties/${property.id}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: property.location.split(',')[0].trim(),
@@ -196,7 +196,7 @@ export function propertySchema(property: {
         property.status === 'Ready to Move'
           ? 'https://schema.org/InStock'
           : 'https://schema.org/PreOrder',
-      seller: { '@id': 'https://www.regaliaestates.in/#organization' },
+      seller: { '@id': 'https://fincapsol.co.in/#organization' },
     },
   }
 }

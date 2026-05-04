@@ -1,17 +1,17 @@
 // lib/seo.ts — Centralised SEO helpers
 
 export const SITE = {
-  name: 'Regalia Estates',
-  url: 'https://www.regaliaestates.in',
+  name: 'Finacap',
+  url: 'https://fincapsol.co.in',
   phone: '+91-98765-43210',
-  email: 'info@regaliaestates.in',
+  email: 'info@fincapsol.co.in',
   address: '12, Shahnajaf Road, Hazratganj, Lucknow — 226001',
   city: 'Lucknow',
   state: 'Uttar Pradesh',
   country: 'India',
   lat: 26.8503,
   lng: 80.9480,
-  twitter: '@RegaliaEstates',
+  twitter: '@Finacap',
   founded: '2009',
 }
 

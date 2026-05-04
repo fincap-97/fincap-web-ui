@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/properties' },
   openGraph: {
-    title: 'Properties in Lucknow | New Builder & Resale | Fincap sol',
+    title: 'Properties in Lucknow | New Builder & Resale | Fincap Adviser',
     description: '200+ verified properties in Lucknow. Filter by location, budget, type. New launches & resale both available.',
-    url: 'https://www.regaliaestates.in/properties',
+    url: 'https://fincapsol.co.in/properties',
   },
 }
 
@@ -60,8 +60,8 @@ export default function PropertiesPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: 'Home', url: 'https://www.regaliaestates.in' },
-        { name: 'Properties', url: 'https://www.regaliaestates.in/properties' },
+        { name: 'Home', url: 'https://fincapsol.co.in' },
+        { name: 'Properties', url: 'https://fincapsol.co.in/properties' },
       ])} />
       <Suspense fallback={<div className="min-h-screen bg-white" />}> {/* ← ADD */}
         <PropertiesClient />

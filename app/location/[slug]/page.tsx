@@ -32,7 +32,7 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: `https://www.regaliaestates.in/location/${location.slug}`,
+      url: `https://fincapsol.co.in//location/${location.slug}`,
       type: 'website',
     },
   }
@@ -76,9 +76,9 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
     <>
       <JsonLd data={placeSchema(location)} />
       <JsonLd data={breadcrumbSchema([
-        { name: 'Home', url: 'https://www.regaliaestates.in' },
-        { name: 'Locations', url: 'https://www.regaliaestates.in/properties' },
-        { name: location.name, url: `https://www.regaliaestates.in/location/${location.slug}` },
+        { name: 'Home', url: 'https://fincapsol.co.in' },
+        { name: 'Locations', url: 'https://fincapsol.co.in/properties' },
+        { name: location.name, url: `https://fincapsol.co.in/location/${location.slug}` },
       ])} />
       <LocationClient slug={params.slug} />
     </>

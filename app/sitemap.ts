@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { properties, locations } from '@/lib/data'
 
-const BASE = 'https://www.regaliaestates.in'
+const BASE = 'https://fincapsol.co.in'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

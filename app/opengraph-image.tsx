@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 // Route segment config
 export const runtime = 'edge'
-export const alt = 'Regalia Estates — Premium Real Estate in Lucknow'
+export const alt = 'Fincap — Premium Real Estate in Lucknow'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -72,7 +72,7 @@ export default function Image() {
             <span style={{ color: 'white', fontSize: 24, fontWeight: 'bold' }}>R</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ color: 'white', fontSize: 26, fontWeight: 700 }}>Regalia</span>
+            <span style={{ color: 'white', fontSize: 26, fontWeight: 700 }}>Fincap</span>
             <span style={{ color: '#C9952A', fontSize: 11, letterSpacing: '0.3em', fontWeight: 600 }}>
               ESTATES
             </span>

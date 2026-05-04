@@ -296,19 +296,117 @@
 
 
 
+// import type { Metadata } from 'next'
+// import './globals.css'
+// import Navbar from '@/components/Navbar'
+// import Footer from '@/components/Footer'
+// import WhatsAppButton from '@/components/WhatsAppButton'
+
+// const SITE_URL = 'https://www.regaliaestates.in'
+// const SITE_NAME = 'Regalia Estates'
+
+// export const metadata: Metadata = {
+//   title: {
+//     default: 'Regalia Estates | Premium Real Estate in Lucknow',
+//     template: '%s | Regalia Estates — Lucknow',
+//   },
+//   description:
+//     'Lucknow ke sabse trusted real estate advisors. Buy, sell, or rent premium properties in Gomti Nagar, Hazratganj, Shaheed Path, Sultanpur Road & more. 15+ years experience. 2500+ happy families.',
+//   keywords: [
+//     'real estate Lucknow', 'property in Lucknow', 'apartments Lucknow',
+//     'villas Lucknow', 'Gomti Nagar property', 'property dealer Lucknow',
+//     'flat for sale Lucknow', 'house for rent Lucknow', 'new projects Lucknow',
+//     'resale property Lucknow', 'buy property Lucknow', '3BHK Lucknow',
+//     'luxury apartments Lucknow', 'Shaheed Path property', 'Hazratganj property',
+//     'Sultanpur Road new projects', 'Lucknow real estate broker',
+//   ],
+//   authors: [{ name: 'Regalia Estates', url: SITE_URL }],
+//   creator: 'Regalia Estates',
+//   publisher: 'Regalia Estates',
+//   category: 'Real Estate',
+//   classification: 'Real Estate Agency',
+//   metadataBase: new URL(SITE_URL),
+//   alternates: { canonical: '/' },
+//   openGraph: {
+//     type: 'website',
+//     locale: 'en_IN',
+//     url: SITE_URL,
+//     siteName: SITE_NAME,
+//     title: 'Regalia Estates | Premium Real Estate in Lucknow',
+//     description:
+//       'Find your dream property in Lucknow with Regalia Estates. New builder homes, resale apartments, villas, commercial spaces — all verified. 15+ years. 2500+ deals.',
+//     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Regalia Estates — Premium Real Estate Lucknow', type: 'image/jpeg' }],
+//   },
+//   twitter: {
+//     card: 'summary_large_image',
+//     site: '@RegaliaEstates',
+//     creator: '@RegaliaEstates',
+//     title: 'Regalia Estates | Premium Real Estate in Lucknow',
+//     description: 'New builder homes & resale properties in Lucknow. Gomti Nagar, Hazratganj, Shaheed Path & more. Free consultation.',
+//     images: ['/og-image.jpg'],
+//   },
+//   robots: {
+//     index: true, follow: true, nocache: false,
+//     googleBot: { index: true, follow: true, noimageindex: false, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
+//   },
+//   icons: {
+//     icon: [
+//       { url: '/Fincap logoicon.png' },
+//       { url: '/Fincap logoicon.png', sizes: '32x32', type: 'image/png' },
+//     ],
+//   },
+//   manifest: '/site.webmanifest',
+//   verification: { google: 'REPLACE_WITH_YOUR_GOOGLE_VERIFICATION_CODE' },
+//   applicationName: SITE_NAME,
+//   appleWebApp: { title: SITE_NAME, statusBarStyle: 'default', capable: true },
+//   formatDetection: { telephone: true, address: true, email: true },
+// }
+
+// export default function RootLayout({ children }: { children: React.ReactNode }) {
+//   return (
+//     <html lang="en" className="scroll-smooth">
+//       <head>
+//         <link rel="preconnect" href="https://fonts.googleapis.com" />
+//         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+//         {/* ── Nunito — same as 360realtors style ── */}
+//         <link
+//           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+//           rel="stylesheet"
+//         />
+//         {/* Geo meta tags for local SEO */}
+//         <meta name="geo.region" content="IN-UP" />
+//         <meta name="geo.placename" content="Lucknow, Uttar Pradesh" />
+//         <meta name="geo.position" content="26.8467;80.9462" />
+//         <meta name="ICBM" content="26.8467, 80.9462" />
+//         <meta name="language" content="English" />
+//         <meta name="revisit-after" content="7 days" />
+//         <meta name="rating" content="general" />
+//       </head>
+//       <body className="font-sans bg-white text-ink antialiased">
+//         <Navbar />
+//         <main className="min-h-screen">{children}</main>
+//         <Footer />
+//         <WhatsAppButton />
+//       </body>
+//     </html>
+//   )
+// }
+
+
+
 import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 
-const SITE_URL = 'https://www.regaliaestates.in'
-const SITE_NAME = 'Regalia Estates'
+const SITE_URL = 'https://fincapsol.co.in'
+const SITE_NAME = 'Fincap'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Regalia Estates | Premium Real Estate in Lucknow',
-    template: '%s | Regalia Estates — Lucknow',
+    default: 'Fincap | Premium Real Estate in Lucknow',
+    template: '%s | Fincap — Lucknow',
   },
   description:
     'Lucknow ke sabse trusted real estate advisors. Buy, sell, or rent premium properties in Gomti Nagar, Hazratganj, Shaheed Path, Sultanpur Road & more. 15+ years experience. 2500+ happy families.',
@@ -319,10 +417,11 @@ export const metadata: Metadata = {
     'resale property Lucknow', 'buy property Lucknow', '3BHK Lucknow',
     'luxury apartments Lucknow', 'Shaheed Path property', 'Hazratganj property',
     'Sultanpur Road new projects', 'Lucknow real estate broker',
+    'Fincap', 'Fincap Adviser', 'fincapsol', 'fincapsol.co.in',
   ],
-  authors: [{ name: 'Regalia Estates', url: SITE_URL }],
-  creator: 'Regalia Estates',
-  publisher: 'Regalia Estates',
+  authors: [{ name: 'Fincap', url: SITE_URL }],
+  creator: 'Fincap',
+  publisher: 'Fincap',
   category: 'Real Estate',
   classification: 'Real Estate Agency',
   metadataBase: new URL(SITE_URL),
@@ -332,16 +431,16 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: 'Regalia Estates | Premium Real Estate in Lucknow',
+    title: 'Fincap | Premium Real Estate in Lucknow',
     description:
-      'Find your dream property in Lucknow with Regalia Estates. New builder homes, resale apartments, villas, commercial spaces — all verified. 15+ years. 2500+ deals.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Regalia Estates — Premium Real Estate Lucknow', type: 'image/jpeg' }],
+      'Find your dream property in Lucknow with Fincap. New builder homes, resale apartments, villas, commercial spaces — all verified. 15+ years. 2500+ deals.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Fincap — Premium Real Estate Lucknow', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@RegaliaEstates',
-    creator: '@RegaliaEstates',
-    title: 'Regalia Estates | Premium Real Estate in Lucknow',
+    site: '@FincapSol',
+    creator: '@FincapSol',
+    title: 'Fincap | Premium Real Estate in Lucknow',
     description: 'New builder homes & resale properties in Lucknow. Gomti Nagar, Hazratganj, Shaheed Path & more. Free consultation.',
     images: ['/og-image.jpg'],
   },
@@ -368,12 +467,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* ── Nunito — same as 360realtors style ── */}
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
           rel="stylesheet"
         />
-        {/* Geo meta tags for local SEO */}
         <meta name="geo.region" content="IN-UP" />
         <meta name="geo.placename" content="Lucknow, Uttar Pradesh" />
         <meta name="geo.position" content="26.8467;80.9462" />

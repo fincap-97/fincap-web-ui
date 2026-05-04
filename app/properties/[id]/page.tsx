@@ -118,9 +118,9 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: `https://www.regaliaestates.in/properties/${property.slug}`,
+      url: `https://fincapsol.co.in/properties/${property.slug}`,
       type: 'website',
-      siteName: 'Regalia Estates',
+      siteName: 'Fincap Adviser',
     },
     twitter: {
       card: 'summary_large_image',
@@ -149,9 +149,9 @@ export default function PropertyDetailPage({ params }: { params: { id: string } 
 
       {/* Breadcrumb schema */}
       <JsonLd data={breadcrumbSchema([
-        { name: 'Home', url: 'https://www.regaliaestates.in' },
-        { name: 'Properties', url: 'https://www.regaliaestates.in/properties' },
-        { name: property.title, url: `https://www.regaliaestates.in/properties/${property.slug}` },
+        { name: 'Home', url: 'https://fincapsol.co.in' },
+        { name: 'Properties', url: 'https://fincapsol.co.in/properties' },
+        { name: property.title, url: `https://fincapsol.co.in/properties/${property.slug}` },
       ])} />
 
       {/* Client-side interactive detail page */}
