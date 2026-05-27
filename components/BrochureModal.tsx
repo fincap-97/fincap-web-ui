@@ -2163,7 +2163,7 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxsIYKwYbNbwHMUwdYfOp
 
 const brochures = [
     { name: 'Imperial Residencia', file: '/Imperial Residencia brochure.pdf' },
-    { name: 'Kailasha Awadh', file: '/Kailasha Awadh brochure.pdf' },
+    { name: 'Kailasha Awadh', file: '/kailasha awadh brochure.pdf' },
     { name: 'ORO Constella', file: '/ORO brochure.pdf' }
 ]
 
