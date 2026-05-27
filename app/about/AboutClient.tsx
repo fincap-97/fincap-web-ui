@@ -563,7 +563,7 @@ const team = [
     role: 'Managing Partner',
     exp: '18+ Years',
     initials: 'RT',
-    speciality: 'Finance & Communication',
+    speciality: 'Sales & Marketing',
     bio: 'With over 18 years of rich professional experience, he has worked with leading organizations such as ICICI Direct, Aviva India, and DRS Group. Backed by a strong academic foundation in Finance and a Post Graduate Diploma in Mass Communication, he brings a unique blend of financial insight and effective communication — combining financial acumen with strategic communication to deliver client-centric and transparent real estate solutions.',
   },
 ]
@@ -894,7 +894,7 @@ export default function AboutClient() {
       </section> */}
 
 
-      <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+      {/* <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3"
@@ -946,7 +946,7 @@ export default function AboutClient() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Team ── */}
       {/* ── Team ── */}
@@ -956,7 +956,7 @@ export default function AboutClient() {
           <div className="text-center mb-10 sm:mb-14">
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3"
               style={{ color: '#E63946' }}>
-              The People Behind Fincap Sol
+              The People Behind Fincap Adviser
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#0B1F3A' }}>
               Our Expert Team

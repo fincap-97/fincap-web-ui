@@ -531,7 +531,7 @@ export default function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3 mt-6">
+            {/* <div className="flex items-center gap-3 mt-6">
               {[
                 { icon: Instagram, label: 'Instagram' },
                 { icon: Facebook, label: 'Facebook' },
@@ -544,8 +544,24 @@ export default function Footer() {
                   <Icon className="w-4 h-4 text-white" />
                 </a>
               ))}
+            </div> */}
+            <div className="flex items-center gap-3 mt-6">
+              {[
+                { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/YOUR_ID' },
+                { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/fincapAd?mibextid=wwXIfr&rdid=0RU6bh8zkfdd2xUR&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F1HtgijFaT8%252F%253Fmibextid%253DwwXIfr#' },
+                { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/@YOUR_ID' },
+              ].map(({ icon: Icon, label, href }) => (
+                <a key={label} href={href}
+                  target="_blank" rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+                  style={{ background: 'rgba(255,255,255,0.08)' }}
+                  aria-label={label}>
+                  <Icon className="w-4 h-4 text-white" />
+                </a>
+              ))}
             </div>
           </div>
+
 
           {/* Quick Links */}
           <div>

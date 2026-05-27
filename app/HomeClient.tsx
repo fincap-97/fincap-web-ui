@@ -86,19 +86,19 @@ export default function HomePage() {
           width: '48%',
           clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)',
         }}>
-          <img src="/kailasha.png" alt="Premium Properties in Lucknow" className="w-full h-full object-cover" />
+          <img src="/IR 5.webp" alt="Premium Properties in Lucknow" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(105deg, rgba(11,31,58,0.55) 0%, rgba(11,31,58,0.20) 40%, transparent 70%)',
           }} />
           <div className="absolute bottom-0 left-0 right-0 h-32" style={{
             background: 'linear-gradient(to top, rgba(11,31,58,0.60) 0%, transparent 100%)',
           }} />
-          <div className="absolute bottom-12 right-8 z-10 px-5 py-4 rounded-xl"
+          {/* <div className="absolute bottom-12 right-8 z-10 px-5 py-4 rounded-xl"
             style={{ background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', boxShadow: '0 8px 32px rgba(11,31,58,0.20)', minWidth: '200px' }}>
             <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#E63946' }}>✦ Under construction</p>
             <p className="font-serif font-bold text-base" style={{ color: '#0B1F3A' }}>Kailasha Awadh </p>
             <p className="text-xs mt-0.5" style={{ color: '#6B7280' }}>Kanpur Road, Near International Airport, Lucknow· Starting ₹45 Lakh</p>
-          </div>
+          </div> */}
           {/* <div className="absolute top-10 right-8 z-10 px-4 py-2 rounded-full"
             style={{ background: '#E63946', boxShadow: '0 4px 16px rgba(230,57,70,0.35)' }}>
             <p className="text-white text-xs font-bold">2500+ Happy Families</p>

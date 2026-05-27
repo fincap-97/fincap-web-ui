@@ -896,11 +896,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo — w-36 mobile, w-44 desktop */}
-            <Link href="/" className="flex items-center group">
-              <div className="w-36 h-36 lg:w-44 lg:h-44 flex items-center justify-center transition-transform group-hover:scale-105">
-                <img src="/fincap logo2.png" alt="Fincap Logo" className="w-full h-full object-contain" />
-              </div>
-            </Link>
+            {/* <Link href="/" className="flex items-center group"> */}
+            <div className="w-36 h-36 lg:w-44 lg:h-44 flex items-center justify-center ">
+              <img src="/fincap logo2.png" alt="Fincap Logo" className="w-full h-full object-contain" />
+            </div>
+            {/* </Link> */}
 
             {/* Desktop Nav — text-base (was text-sm) */}
             <div className="hidden lg:flex items-center gap-1">
