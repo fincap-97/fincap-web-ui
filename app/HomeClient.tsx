@@ -86,23 +86,14 @@ export default function HomePage() {
           width: '48%',
           clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)',
         }}>
-          <img src="/IR 5.webp" alt="Premium Properties in Lucknow" className="w-full h-full object-cover" />
+          <img src="/Home page.jpeg" alt="Premium Properties in Lucknow" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(105deg, rgba(11,31,58,0.55) 0%, rgba(11,31,58,0.20) 40%, transparent 70%)',
           }} />
           <div className="absolute bottom-0 left-0 right-0 h-32" style={{
             background: 'linear-gradient(to top, rgba(11,31,58,0.60) 0%, transparent 100%)',
           }} />
-          {/* <div className="absolute bottom-12 right-8 z-10 px-5 py-4 rounded-xl"
-            style={{ background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', boxShadow: '0 8px 32px rgba(11,31,58,0.20)', minWidth: '200px' }}>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: '#E63946' }}>✦ Under construction</p>
-            <p className="font-serif font-bold text-base" style={{ color: '#0B1F3A' }}>Kailasha Awadh </p>
-            <p className="text-xs mt-0.5" style={{ color: '#6B7280' }}>Kanpur Road, Near International Airport, Lucknow· Starting ₹45 Lakh</p>
-          </div> */}
-          {/* <div className="absolute top-10 right-8 z-10 px-4 py-2 rounded-full"
-            style={{ background: '#E63946', boxShadow: '0 4px 16px rgba(230,57,70,0.35)' }}>
-            <p className="text-white text-xs font-bold">2500+ Happy Families</p>
-          </div> */}
+
         </div>
 
         <svg className="absolute z-10 hidden lg:block"
@@ -119,11 +110,11 @@ export default function HomePage() {
           <line x1="100" y1="0" x2="0" y2="100" stroke="url(#redLineGrad)" strokeWidth="3" />
         </svg>
 
-        {/* ── Hero content ── */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 sm:pt-28 pb-14 sm:pb-16">
+
+        {/* <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 sm:pt-28 pb-14 sm:pb-16">
           <div className="max-w-xl lg:max-w-2xl">
 
-            {/* Badge */}
+           
             <div className="inline-flex items-center gap-2 mb-6 sm:mb-8" style={{
               background: '#FEE8EA',
               border: '1px solid rgba(230,57,70,0.20)',
@@ -136,7 +127,6 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Heading — smaller on mobile */}
             <h1 className="font-serif font-bold leading-[1.08] mb-5 sm:mb-6">
               <span className="block text-[2.35rem] sm:text-5xl md:text-6xl lg:text-7xl" style={{ color: '#0B1F3A' }}>
                 Your Trusted
@@ -161,7 +151,7 @@ export default function HomePage() {
               complete transparency, trusted expertise, and end-to-end support.
             </p>
 
-            {/* Stats — 2-col grid on mobile, inline row on sm+ */}
+          
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-y-5 sm:gap-y-0 mb-10 sm:mb-12">
               {stats.map((stat, i) => (
                 <div
@@ -170,6 +160,122 @@ export default function HomePage() {
                   style={{ borderRight: i < stats.length - 1 ? '1px solid #E8ECF2' : 'none' }}
                 >
                   <p className="font-serif font-bold text-xl sm:text-2xl" style={{ color: '#E63946' }}>{stat.value}</p>
+                  <p className="text-xs font-medium mt-0.5" style={{ color: '#6B7280' }}>{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+      
+          <div className="rounded-xl p-2 w-full max-w-4xl"
+            style={{ background: '#FFFFFF', border: '1px solid #E8ECF2', boxShadow: '0 4px 24px rgba(11,31,58,0.10)' }}>
+
+        
+            <div className="flex gap-1 p-1 rounded-lg mb-2" style={{ background: '#F5F7FA' }}>
+              {(['buy', 'rent', 'project'] as const).map((tab) => (
+                <button key={tab} onClick={() => setSearchTab(tab)}
+                  className="flex-1 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all"
+                  style={searchTab === tab
+                    ? { background: '#E63946', color: '#fff', boxShadow: '0 2px 8px rgba(230,57,70,0.30)' }
+                    : { color: '#6B7280' }}>
+                  {tab === 'project' ? 'New Projects' : `For ${tab === 'buy' ? 'Sale' : 'Rent'}`}
+                </button>
+              ))}
+            </div>
+
+           
+            <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex-1 flex items-center gap-3 rounded-lg px-4 py-3"
+                style={{ background: '#F5F7FA', border: '1px solid #E8ECF2' }}>
+                <MapPin className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+                <select value={searchLocation} onChange={(e) => setSearchLocation(e.target.value)}
+                  className="w-full bg-transparent text-sm focus:outline-none"
+                  style={{ color: searchLocation ? '#1A1A1A' : '#9CA3AF' }}>
+                  <option value="">Select Location</option>
+                  {locationOptions.map((l) => <option key={l} value={l}>{l}</option>)}
+                </select>
+              </div>
+              <div className="flex-1 flex items-center gap-3 rounded-lg px-4 py-3"
+                style={{ background: '#F5F7FA', border: '1px solid #E8ECF2' }}>
+                <IndianRupee className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+                <select value={searchBudget} onChange={(e) => setSearchBudget(e.target.value)}
+                  className="w-full bg-transparent text-sm focus:outline-none"
+                  style={{ color: searchBudget ? '#1A1A1A' : '#9CA3AF' }}>
+                  <option value="">Budget Range</option>
+                  {budgetOptions.map((b) => <option key={b} value={b}>{b}</option>)}
+                </select>
+              </div>
+              <div className="flex-1 flex items-center gap-3 rounded-lg px-4 py-3"
+                style={{ background: '#F5F7FA', border: '1px solid #E8ECF2' }}>
+                <Home className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+                <select value={searchType} onChange={(e) => setSearchType(e.target.value)}
+                  className="w-full bg-transparent text-sm focus:outline-none"
+                  style={{ color: searchType ? '#1A1A1A' : '#9CA3AF' }}>
+                  <option value="">Property Type</option>
+                  {typeOptions.map((t) => <option key={t} value={t}>{t}</option>)}
+                </select>
+              </div>
+             
+              <button onClick={handleSearch}
+                className="flex items-center justify-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg text-white transition-all w-full sm:w-auto whitespace-nowrap"
+                style={{ background: '#E63946', boxShadow: '0 2px 12px rgba(230,57,70,0.35)' }}>
+                <Search className="w-4 h-4" />
+                Search
+              </button>
+            </div>
+          </div>
+        </div> */}
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 sm:pt-28 pb-14 sm:pb-16">
+          <div className="max-w-xl lg:max-w-2xl">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 mb-6 sm:mb-8" style={{
+              background: '#FEE8EA',
+              border: '1px solid rgba(230,57,70,0.20)',
+              borderRadius: '100px',
+              padding: '6px 14px',
+            }}>
+              <div className="w-2 h-2 rounded-full animate-pulse shrink-0" style={{ background: '#E63946' }} />
+              <span className="text-xs sm:text-sm font-semibold tracking-wide" style={{ color: '#E63946' }}>
+                Lucknow&apos;s Most Trusted Real Estate Firm
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h1 className="font-serif font-bold leading-[1.08] mb-5 sm:mb-6">
+              <span className="block text-[1.8rem] sm:text-4xl md:text-5xl lg:text-6xl" style={{ color: '#0B1F3A' }}>
+                Your Trusted
+              </span>
+              <span className="block text-[1.5rem] sm:text-3xl md:text-4xl lg:text-5xl" style={{
+                background: 'linear-gradient(90deg, #E63946 0%, #EF5A65 50%, #E63946 100%)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                animation: 'shimmer 3s linear infinite',
+              }}>
+                Real Estate Advisors
+              </span>
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1" style={{ color: '#0B1F3A' }}>
+                in Lucknow
+              </span>
+            </h1>
+
+            <p className="text-sm sm:text-base max-w-lg mb-8 sm:mb-10 leading-relaxed" style={{ color: '#6B7280' }}>
+              From premium apartments to luxury villas — we help you find the perfect property with
+              complete transparency, trusted expertise, and end-to-end support.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-y-5 sm:gap-y-0 mb-10 sm:mb-12">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className="sm:pr-6 sm:mr-6 md:pr-8 md:mr-8"
+                  style={{ borderRight: i < stats.length - 1 ? '1px solid #E8ECF2' : 'none' }}
+                >
+                  <p className="font-serif font-bold text-lg sm:text-xl" style={{ color: '#E63946' }}>{stat.value}</p>
                   <p className="text-xs font-medium mt-0.5" style={{ color: '#6B7280' }}>{stat.label}</p>
                 </div>
               ))}
@@ -225,7 +331,6 @@ export default function HomePage() {
                   {typeOptions.map((t) => <option key={t} value={t}>{t}</option>)}
                 </select>
               </div>
-              {/* Full width on mobile, auto on sm+ */}
               <button onClick={handleSearch}
                 className="flex items-center justify-center gap-2 font-semibold text-sm px-6 py-3 rounded-lg text-white transition-all w-full sm:w-auto whitespace-nowrap"
                 style={{ background: '#E63946', boxShadow: '0 2px 12px rgba(230,57,70,0.35)' }}>
@@ -324,7 +429,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── HOT DEALS / NEW PROJECTS ─── */}
-      <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+      {/* <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-9 sm:mb-12">
             <div>
@@ -341,7 +446,7 @@ export default function HomePage() {
               All New Projects <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-          {/* 1 col mobile → 2 col tablet → 3 col desktop */}
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {hotDeals.map((p) => (
               <Link key={p.id} href={`/properties/${p.slug}`} className="group">
@@ -368,6 +473,92 @@ export default function HomePage() {
                       <div className="flex gap-2 sm:gap-3 items-center flex-wrap">
                         {p.developer && <span className="font-semibold text-xs sm:text-sm" style={{ color: '#0B1F3A' }}>{p.developer}</span>}
                         {p.possession && <span className="text-xs" style={{ color: '#6B7280' }}>· {p.possession}</span>}
+                      </div>
+                      <ChevronRight className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-9 sm:mb-12">
+            <div>
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-2" style={{ color: '#E63946' }}>
+                <span className="w-6 sm:w-8 h-px" style={{ background: '#E63946' }} />New &amp; Trending
+              </p>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#0B1F3A' }}>
+                Hot Projects &amp; Deals
+              </h2>
+            </div>
+            <Link href="/properties?tab=New Launch"
+              className="flex items-center gap-2 font-semibold text-sm sm:text-base hover:gap-4 transition-all group shrink-0"
+              style={{ color: '#E63946' }}>
+              All New Projects <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {hotDeals.map((p) => (
+              <Link key={p.id} href={`/properties/${p.slug}`} className="group">
+                <div className="rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                  style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 16px rgba(11,31,58,0.06)' }}>
+
+                  {/* ── Image / Gradient ── */}
+                  <div className="h-48 sm:h-52 relative overflow-hidden">
+                    {p.mainImage ? (
+                      <>
+                        <img
+                          src={p.mainImage}
+                          alt={p.title}
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0"
+                          style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.08) 0%, transparent 40%, rgba(0,0,0,0.35) 100%)' }} />
+                      </>
+                    ) : (
+                      <div className="absolute inset-0"
+                        style={{ background: `linear-gradient(135deg, ${p.gradientFrom} 0%, ${p.gradientTo} 100%)` }} />
+                    )}
+
+                    {/* Badge */}
+                    {p.badge && (
+                      <div className="absolute top-4 left-4 z-10">
+                        <span className="text-white text-xs font-bold px-3 py-1.5 rounded"
+                          style={{ background: '#E63946' }}>{p.badge}</span>
+                      </div>
+                    )}
+
+                    {/* Bottom overlay — category · area (no price) */}
+                    <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 z-10"
+                      style={{ background: 'linear-gradient(to top, rgba(11,31,58,0.85), transparent)' }}>
+                      <p className="text-white/70 text-xs">{p.category} · {p.area}</p>
+                    </div>
+                  </div>
+
+                  {/* Card body */}
+                  <div className="bg-white p-4 sm:p-5">
+                    <h3 className="font-serif font-semibold text-base mb-2 transition-colors" style={{ color: '#0B1F3A' }}>
+                      {p.title}
+                    </h3>
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm mb-3 sm:mb-4" style={{ color: '#6B7280' }}>
+                      <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" style={{ color: '#E63946' }} />
+                      {p.location}
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <div className="flex gap-2 sm:gap-3 items-center flex-wrap">
+                        {p.developer && (
+                          <span className="font-semibold text-xs sm:text-sm" style={{ color: '#0B1F3A' }}>
+                            {p.developer}
+                          </span>
+                        )}
+                        {p.possession && (
+                          <span className="text-xs" style={{ color: '#6B7280' }}>· {p.possession}</span>
+                        )}
                       </div>
                       <ChevronRight className="w-4 h-4 shrink-0" style={{ color: '#E63946' }} />
                     </div>
@@ -427,7 +618,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── DEVELOPER PARTNERS ─── */}
-      <section className="py-10 sm:py-14"
+      {/* <section className="py-10 sm:py-14"
         style={{ background: '#FFFFFF', borderTop: '1px solid #E8ECF2', borderBottom: '1px solid #E8ECF2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs font-semibold uppercase tracking-widest mb-7 sm:mb-10" style={{ color: '#6B7280' }}>
@@ -442,6 +633,35 @@ export default function HomePage() {
                   style={{ background: '#0B1F3A' }}>
                   {dev.initials}
                 </div>
+                <span className="font-semibold text-xs sm:text-sm" style={{ color: '#0B1F3A' }}>{dev.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+      <section className="py-10 sm:py-14"
+        style={{ background: '#FFFFFF', borderTop: '1px solid #E8ECF2', borderBottom: '1px solid #E8ECF2' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest mb-7 sm:mb-10" style={{ color: '#6B7280' }}>
+            Our Trusted Developer Partners
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+            {developers.map((dev) => (
+              <div key={dev.name}
+                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-3 rounded-lg bg-white cursor-default transition-all"
+                style={{ border: '1px solid #E8ECF2', boxShadow: '0 1px 4px rgba(11,31,58,0.05)' }}>
+                {dev.logo ? (
+                  <img
+                    src={dev.logo}
+                    alt={`${dev.name} logo`}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-contain shrink-0 bg-white"
+                  />
+                ) : (
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center text-white text-xs font-bold font-serif shrink-0"
+                    style={{ background: '#0B1F3A' }}>
+                    {dev.initials}
+                  </div>
+                )}
                 <span className="font-semibold text-xs sm:text-sm" style={{ color: '#0B1F3A' }}>{dev.name}</span>
               </div>
             ))}

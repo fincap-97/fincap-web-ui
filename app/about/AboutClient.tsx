@@ -555,6 +555,7 @@ const team = [
     role: 'Managing Partner',
     exp: '20+ Years',
     initials: 'RD',
+    image: '/team/Rakesh dubey .jpeg',
     speciality: 'Sales & Marketing',
     bio: 'A management graduate with more than 20 years of diverse experience in Sales & Marketing. Formerly worked with HDFC Bank Ltd. and Kotak Mahindra Bank Ltd. Possesses a natural know-how of mapping sales opportunities and expanding the customer base. Treasures experience of Banking and Distribution of various financial products including Mutual Funds, Insurance, Stock Broking and all Banking Products. Previously worked as a Wealth Manager in IIFL.',
   },
@@ -563,6 +564,7 @@ const team = [
     role: 'Managing Partner',
     exp: '18+ Years',
     initials: 'RT',
+    image: '/team/Ram sharan.jpeg',
     speciality: 'Sales & Marketing',
     bio: 'With over 18 years of rich professional experience, he has worked with leading organizations such as ICICI Direct, Aviva India, and DRS Group. Backed by a strong academic foundation in Finance and a Post Graduate Diploma in Mass Communication, he brings a unique blend of financial insight and effective communication — combining financial acumen with strategic communication to deliver client-centric and transparent real estate solutions.',
   },
@@ -831,125 +833,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      {/* ── Timeline ── */}
-      {/* <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14">
-            <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3"
-              style={{ color: '#E63946' }}>
-              Our Journey
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#0B1F3A' }}>
-              Key Milestones
-            </h2>
-          </div>
 
-          <div className="relative">
-            
-            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px"
-              style={{ background: '#E8ECF2' }} />
-
-            <div className="space-y-8 sm:space-y-10">
-              {milestones.map((m, i) => (
-                <div key={m.year}
-                  className={`relative flex gap-0 items-start
-                    sm:flex-row sm:gap-0
-                    ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}
-                  `}>
-                  
-                  <div className={`
-                    pl-10 sm:pl-0 w-full
-                    sm:w-1/2
-                    ${i % 2 === 0 ? 'sm:pr-12 sm:text-right' : 'sm:pl-12'}
-                  `}>
-                    <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 transition-shadow hover:shadow-lg"
-                      style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 12px rgba(11,31,58,0.06)' }}>
-                      <span className="text-white text-xs font-bold px-3 py-1 rounded-full"
-                        style={{ background: '#E63946' }}>
-                        {m.year}
-                      </span>
-                      <h3 className="font-serif font-semibold text-base sm:text-lg mt-3 mb-1.5 sm:mb-2"
-                        style={{ color: '#0B1F3A' }}>
-                        {m.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm" style={{ color: '#6B7280' }}>{m.desc}</p>
-                    </div>
-                  </div>
-
-                  
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 z-10"
-                    style={{
-                      background: '#E63946',
-                      borderColor: '#FFFFFF',
-                      marginTop: '20px',
-                      boxShadow: '0 0 0 2px #E63946',
-                    }} />
-
-                  <div className="hidden sm:block sm:w-1/2" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-
-      {/* <section className="py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-14">
-            <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2 sm:mb-3"
-              style={{ color: '#E63946' }}>
-              Our Journey
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#0B1F3A' }}>
-              Key Milestones
-            </h2>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px"
-              style={{ background: '#E8ECF2' }} />
-
-            <div className="space-y-8 sm:space-y-10">
-              {milestones.map((m, i) => (
-                <div key={m.year}
-                  className={`relative flex gap-0 items-start
-                    sm:flex-row sm:gap-0
-                    ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'}
-                  `}>
-                  <div className={`
-                    pl-10 sm:pl-0 w-full
-                    sm:w-1/2
-                    ${i % 2 === 0 ? 'sm:pr-12 sm:text-right' : 'sm:pl-12'}
-                  `}>
-                    <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 transition-shadow hover:shadow-lg"
-                      style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 12px rgba(11,31,58,0.06)' }}>
-                      <h3 className="font-serif font-semibold text-base sm:text-lg mb-1.5 sm:mb-2"
-                        style={{ color: '#0B1F3A' }}>
-                        {m.title}
-                      </h3>
-                      <p className="text-xs sm:text-sm" style={{ color: '#6B7280' }}>{m.desc}</p>
-                    </div>
-                  </div>
-
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 z-10"
-                    style={{
-                      background: '#E63946',
-                      borderColor: '#FFFFFF',
-                      marginTop: '20px',
-                      boxShadow: '0 0 0 2px #E63946',
-                    }} />
-
-                  <div className="hidden sm:block sm:w-1/2" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* ── Team ── */}
-      {/* ── Team ── */}
       {/* <section className="py-14 sm:py-20 md:py-28"
         style={{ background: '#F5F7FA', borderTop: '1px solid #E8ECF2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -959,16 +843,17 @@ export default function AboutClient() {
               The People Behind Fincap Adviser
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold" style={{ color: '#0B1F3A' }}>
-              Our Expert Team
+              Team Fincap Management
             </h2>
           </div>
 
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 max-w-4xl mx-auto">
             {team.map((member) => (
               <div key={member.name}
                 className="bg-white p-5 sm:p-7 rounded-xl sm:rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{ border: '1px solid #E8ECF2', boxShadow: '0 2px 12px rgba(11,31,58,0.06)' }}>
+
+             
                 <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-lg font-serif shrink-0"
                     style={{ background: 'linear-gradient(135deg, #0B1F3A, #1E3A5F)' }}>
@@ -983,8 +868,17 @@ export default function AboutClient() {
                     </p>
                   </div>
                 </div>
+
                 <div className="w-full h-px mb-3 sm:mb-4" style={{ background: '#E8ECF2' }} />
-                <div className="flex items-center justify-between gap-2">
+
+                
+                <p className="text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4" style={{ color: '#6B7280' }}>
+                  {member.bio}
+                </p>
+
+              
+                <div className="flex items-center justify-between gap-2 pt-3"
+                  style={{ borderTop: '1px solid #E8ECF2' }}>
                   <span className="text-[10px] sm:text-xs font-medium px-2.5 sm:px-3 py-1 rounded-full truncate"
                     style={{ background: '#F1F5F9', color: '#0B1F3A', border: '1px solid #E8ECF2' }}>
                     {member.speciality}
@@ -998,7 +892,6 @@ export default function AboutClient() {
           </div>
         </div>
       </section> */}
-
       <section className="py-14 sm:py-20 md:py-28"
         style={{ background: '#F5F7FA', borderTop: '1px solid #E8ECF2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1020,10 +913,32 @@ export default function AboutClient() {
 
                 {/* Header */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-bold text-base sm:text-lg font-serif shrink-0"
-                    style={{ background: 'linear-gradient(135deg, #0B1F3A, #1E3A5F)' }}>
-                    {member.initials}
+
+                  {/* ── Avatar: image if available, else initials ── */}
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden shrink-0"
+                    style={{ border: '2px solid #E8ECF2' }}>
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none'
+                          const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                          if (fallback) fallback.style.display = 'flex'
+                        }}
+                      />
+                    ) : null}
+                    <div
+                      className="w-full h-full items-center justify-center text-white font-bold text-base sm:text-lg font-serif"
+                      style={{
+                        background: 'linear-gradient(135deg, #0B1F3A, #1E3A5F)',
+                        display: member.image ? 'none' : 'flex',
+                      }}>
+                      {member.initials}
+                    </div>
                   </div>
+
                   <div className="leading-tight">
                     <p className="font-serif font-semibold text-base sm:text-[17px]" style={{ color: '#0B1F3A' }}>
                       {member.name}
@@ -1042,7 +957,7 @@ export default function AboutClient() {
                 </p>
 
                 {/* Footer */}
-                <div className="flex items-center justify-between gap-2 pt-3"
+                {/* <div className="flex items-center justify-between gap-2 pt-3"
                   style={{ borderTop: '1px solid #E8ECF2' }}>
                   <span className="text-[10px] sm:text-xs font-medium px-2.5 sm:px-3 py-1 rounded-full truncate"
                     style={{ background: '#F1F5F9', color: '#0B1F3A', border: '1px solid #E8ECF2' }}>
@@ -1051,7 +966,7 @@ export default function AboutClient() {
                   <span className="text-xs font-semibold shrink-0" style={{ color: '#E63946' }}>
                     {member.exp}
                   </span>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

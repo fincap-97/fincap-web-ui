@@ -7620,8 +7620,8 @@ const HOME_BUDGET_MAP: Record<string, number> = {
 }
 
 const LOCATIONS = [
-  'Vrindavan Yojna', 'Shaheed Path', 'Gomti Nagar', 'Hazratganj',
-  'Aliganj', 'Sultanpur Road', 'Vibhuti Khand', 'Kanpur Road', 'Indira Nagar',
+  'Vrindavan Yojna', 'Shaheed Path', 'Gomti Nagar', 'Hazratganj', 'Gomti Nagar Extension',
+  'Sultanpur Road', 'Vibhuti Khand', 'Kanpur Road'
 ]
 
 function getCategory(p: Property): Category {
